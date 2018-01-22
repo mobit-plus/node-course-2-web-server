@@ -61,6 +61,11 @@ app.get('/bad',(req,res) =>{
         
     });
  });
+ app.get('/project',(req,res) => {
+    res.render('prsoject.hbs',{
+        Title: 'Project',
+    });
+ });
 app.listen(port,() => {
     console.log(`The server connect to port ${port}`);
 });
