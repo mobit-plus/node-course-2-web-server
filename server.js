@@ -1,6 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+   
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -32,9 +34,9 @@ app.use((req,res,next) =>{
     next();
 });
 
-app.use((req,res,next) =>{
-    res.render('maintenence.hbs');
-});
+// app.use((req,res,next) =>{
+//     res.render('maintenence.hbs');
+// });
 
 app.use(express.static(__dirname + '/public'));
 
@@ -59,6 +61,6 @@ app.get('/bad',(req,res) =>{
         
     });
  });
-app.listen(3000,() => {
-    console.log('The server connect to 3000 port');
+app.listen(port,() => {
+    console.log(`The server connect to port ${port}`);
 });
