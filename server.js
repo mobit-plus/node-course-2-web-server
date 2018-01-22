@@ -62,7 +62,7 @@ app.get('/bad',(req,res) =>{
     });
  });
  app.get('/project',(req,res) => {
-    res.render('prsoject.hbs',{
+    res.render('project.hbs',{
         Title: 'Project',
     });
  });
